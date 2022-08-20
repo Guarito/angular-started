@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -17,7 +18,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+  ],
   declarations: [
     AppComponent,
     TopBarComponent,
